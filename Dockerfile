@@ -5,7 +5,7 @@ FROM ubuntu:latest
 WORKDIR /app
 
 # Copy your C program and any source files to the container
-COPY . .
+COPY ./src .
 
 # Install necessary dependencies (e.g., a C compiler)
 RUN apt-get update && \

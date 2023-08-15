@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd ./src
+
 make create_docker
 IMAGE_NAME="my-ftp-server"
 
@@ -8,4 +10,5 @@ for container_id in $(docker ps -a --filter "ancestor=$IMAGE_NAME" -q); do
     docker stop $container_id
     docker rm $container_id
 done
+
 make run_docker

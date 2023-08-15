@@ -45,7 +45,7 @@ run: main
 
 .PHONY: create_docker
 create_docker: 
-	docker build -t my-ftp-server .
+	docker build -t my-ftp-server -f ../Dockerfile ..
 
 .PHONY: run_docker
 run_docker: 
