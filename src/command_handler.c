@@ -84,7 +84,7 @@ int handle_login(command_t* command){
 
     char* username = command->tokens[1];
 
-    if (strcasecmp(username, "cs317") == 0) {
+    if (strcasecmp(username, "test") == 0) {
         command->is_logged_in = 1;
         if (_send(command->control_fd, codes[3]) == -1) {
             return -1;
